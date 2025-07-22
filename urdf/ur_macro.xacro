@@ -57,6 +57,7 @@
     name
     tf_prefix
     parent
+    mount_yaw
     *origin
     joint_limits_parameters_file
     kinematics_parameters_file
@@ -333,7 +334,7 @@
 
     <!-- base_joint fixes base_link to the environment -->
     <joint name="${tf_prefix}base_joint" type="fixed">
-      <xacro:insert_block name="origin" />
+      <origin xyz="0 0 0" rpy="0 0 ${mount_yaw}" />
       <parent link="${parent}" />
       <child link="${tf_prefix}base_link" />
     </joint>
