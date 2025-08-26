@@ -1,20 +1,22 @@
 Panels:
   - Class: rviz_common/Displays
-    Help Height: 87
+    Help Height: 70
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /RobotModel1
         - /RobotModel1/Description Topic1
-      Splitter Ratio: 0.5
-    Tree Height: 779
+        - /DepthCloud1/Occlusion Compensation1
+        - /DepthCloud1/Autocompute Value Bounds1
+        - /Image1/Topic1
+      Splitter Ratio: 0.4888888895511627
+    Tree Height: 538
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
     Expanded:
-      - /2D Goal Pose1
-      - /Publish Point1
+      - /Interact1
+      - /Measure1
     Name: Tool Properties
     Splitter Ratio: 0.5886790156364441
   - Class: rviz_common/Views
@@ -22,6 +24,18 @@ Panels:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: rviz_common/Displays
+    Help Height: 70
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /DepthCloud1/Auto Size1
+        - /DepthCloud1/Occlusion Compensation1
+        - /DepthCloud1/Autocompute Value Bounds1
+      Splitter Ratio: 0.5
+    Tree Height: 373
+  - Class: rviz_common/Transformation
+    Name: Transformation
 Visualization Manager:
   Class: ""
   Displays:
@@ -74,6 +88,42 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_1_optical:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_2_optical:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_3_optical:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        depth_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        depth_camera_optical:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         flange:
           Alpha: 1
           Show Axes: false
@@ -87,11 +137,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        hex_qc_ft_sensor:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         linear_rail:
           Alpha: 1
           Show Axes: false
@@ -174,13 +219,27 @@ Visualization Manager:
           Value: true
         base_link_inertia:
           Value: true
+        camera_1:
+          Value: true
+        camera_1_optical:
+          Value: true
+        camera_2:
+          Value: true
+        camera_2_optical:
+          Value: true
+        camera_3:
+          Value: true
+        camera_3_optical:
+          Value: true
+        depth_camera:
+          Value: true
+        depth_camera_optical:
+          Value: true
         flange:
           Value: true
         forearm_link:
           Value: true
         ft_frame:
-          Value: true
-        hex_qc_ft_sensor:
           Value: true
         linear_rail:
           Value: true
@@ -195,8 +254,6 @@ Visualization Manager:
         table2:
           Value: true
         tool0:
-          Value: true
-        tool0_controller:
           Value: true
         upper_arm_link:
           Value: true
@@ -217,13 +274,24 @@ Visualization Manager:
       Show Names: false
       Tree:
         world:
+          camera_1:
+            camera_1_optical:
+              {}
+          camera_2:
+            camera_2_optical:
+              {}
+          camera_3:
+            camera_3_optical:
+              {}
+          depth_camera:
+            depth_camera_optical:
+              {}
           work_cell:
             linear_rail:
               slider_base:
                 base_link:
                   base:
-                    tool0_controller:
-                      {}
+                    {}
                   base_link_inertia:
                     shoulder_link:
                       upper_arm_link:
@@ -233,8 +301,7 @@ Visualization Manager:
                               wrist_3_link:
                                 flange:
                                   tool0:
-                                    hex_qc_ft_sensor:
-                                      {}
+                                    {}
                                 ft_frame:
                                   {}
             plc_linear_rail:
@@ -244,6 +311,93 @@ Visualization Manager:
             table2:
               {}
       Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Auto Size:
+        Auto Size Factor: 1
+        Value: true
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 1.9200174808502197
+        Min Value: -0.00026297569274902344
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/DepthCloud
+      Color: 255; 255; 255
+      Color Image Topic: ""
+      Color Transformer: AxisColor
+      Color Transport Hint: raw
+      Decay Time: 0
+      Depth Map Topic: /depth_camera/depth_image
+      Depth Map Transport Hint: raw
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: DepthCloud
+      Occlusion Compensation:
+        Occlusion Time-Out: 30
+        Value: false
+      Position Transformer: XYZ
+      Queue Size: 5
+      Reliability Policy: Best effort
+      Selectable: true
+      Size (Pixels): 3
+      Style: Flat Squares
+      Topic Filter: true
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /pointcloud
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /camera_1/image_raw
       Value: true
   Enabled: true
   Global Options:
@@ -290,21 +444,26 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: 0
-      Class: rviz_default_plugins/TopDownOrtho
+      Class: rviz_default_plugins/Orbit
+      Distance: 6.413901329040527
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Focal Point:
+        X: 0.3778914213180542
+        Y: 0.5374326705932617
+        Z: 1.9448517560958862
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 1447.366943359375
+      Pitch: 0.6746827960014343
       Target Frame: <Fixed Frame>
-      Value: TopDownOrtho (rviz_default_plugins)
-      X: 0.09226337820291519
-      Y: -1.3719615936279297
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 0.2199392020702362
     Saved: ~
 Window Geometry:
   Displays:
@@ -312,10 +471,14 @@ Window Geometry:
   Height: 1011
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016a0000039dfc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b0000039d000000c700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c0000026100000001000001100000039dfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003b0000039d000000a000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000004b80000039d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000019e0000039dfc0200000011fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003b0000029b000000c700fffffffb0000000a0049006d00610067006501000002dc000000fc0000002800fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d006100670065020000032c000002de00000179000000fbfb0000000c00430061006d006500720061010000030e000000ca0000000000000000fb0000000a0049006d00610067006502000001b5000002e90000016a000000f0fb000000100044006900730070006c00610079007300000002b000000128000000c700fffffffb0000001c005400720061006e00730066006f0072006d006100740069006f006e0000000319000000bf0000007900fffffffb0000000a0049006d006100670065010000028a0000014e0000000000000000fb0000000c00430061006d00650072006101000002d7000001010000000000000000fb0000000a0049006d00610067006501000002b800000120000000000000000000000001000001100000039dfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fc0000003b0000039d000000a000fffffffa000000010100000002fb0000000a0049006d0061006700650000000000ffffffff0000000000000000fb0000000a005600690065007700730100000670000001100000010000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000004840000039d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Tool Properties:
+    collapsed: false
+  Transformation:
     collapsed: false
   Views:
     collapsed: false
