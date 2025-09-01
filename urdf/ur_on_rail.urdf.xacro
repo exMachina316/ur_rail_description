@@ -343,7 +343,7 @@
     <origin xyz="-1.0 -0.7 2.0" rpy="0 0.8 0.64" />
   </xacro:camera_macro>
   <xacro:camera_macro name="camera_3">
-    <origin xyz="0 1.0 2.0" rpy="0 1.0 -1.5707" />
+    <origin xyz="0 1.0 2.0" rpy="0 0 -1.5707" />
   </xacro:camera_macro>
 
   <!-- Depth Cameras -->
