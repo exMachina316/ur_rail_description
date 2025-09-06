@@ -337,7 +337,7 @@
 
   <!-- RGB Cameras -->
   <xacro:camera_macro name="camera_1">
-    <origin xyz="1.0 -0.7 2.0" rpy="0 0.8 2.50" />
+    <origin xyz="0.86 0.25 1.0" rpy="0 0 3.1414" />
   </xacro:camera_macro>
   <xacro:camera_macro name="camera_2">
     <origin xyz="-1.0 -0.7 2.0" rpy="0 0.8 0.64" />
