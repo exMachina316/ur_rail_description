@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /DepthCloud1/Occlusion Compensation1
         - /DepthCloud1/Autocompute Value Bounds1
+        - /Image1
         - /Image1/Topic1
       Splitter Ratio: 0.4888888895511627
     Tree Height: 538
@@ -253,6 +254,8 @@ Visualization Manager:
           Value: true
         tool0:
           Value: true
+        tool0_controller:
+          Value: true
         upper_arm_link:
           Value: true
         work_cell:
@@ -289,7 +292,8 @@ Visualization Manager:
               slider_base:
                 base_link:
                   base:
-                    {}
+                    tool0_controller:
+                      {}
                   base_link_inertia:
                     shoulder_link:
                       upper_arm_link:
@@ -395,7 +399,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Best Effort
-        Value: /camera_1/image_raw
+        Value: /oak/rgb/image_rect
       Value: true
   Enabled: true
   Global Options:

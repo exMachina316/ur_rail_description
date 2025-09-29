@@ -25,10 +25,10 @@
             <child link="${name}" />
             <xacro:insert_block name="origin" />
         </joint>
-        <link name="${name}_optical" />
+        <link name="${name}_optical_frame" />
         <joint name="${name}_optical_joint" type="fixed">
             <parent link="${name}" />
-            <child link="${name}_optical" />
+            <child link="${name}_optical_frame" />
             <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707" />
         </joint>
 

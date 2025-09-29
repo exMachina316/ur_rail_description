@@ -336,13 +336,13 @@
   </joint>
 
   <!-- RGB Cameras -->
-  <xacro:camera_macro name="camera_1">
-    <origin xyz="0.86 0.25 1.0" rpy="0 0 3.1414" />
+  <xacro:camera_macro name="oak1_rgb_camera">
+    <origin xyz="0.862 0.17 1.175" rpy="-0.005 0.455 3.095" />
   </xacro:camera_macro>
-  <xacro:camera_macro name="camera_2">
+  <xacro:camera_macro name="oak2_rgb_camera">
     <origin xyz="-1.0 -0.7 2.0" rpy="0 0.8 0.64" />
   </xacro:camera_macro>
-  <xacro:camera_macro name="camera_3">
+  <xacro:camera_macro name="oak3_rgb_camera">
     <origin xyz="0 1.0 2.0" rpy="0 0 -1.5707" />
   </xacro:camera_macro>
 
