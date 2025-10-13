@@ -335,7 +335,7 @@
     <origin xyz="0 0 0.086" rpy="0 0 0" />
   </joint>
 
-  <!-- RGB Cameras -->
+  <!-- RGB Cameras
   <xacro:camera_macro name="oak1_rgb_camera">
     <origin xyz="0.862 0.17 1.175" rpy="-0.005 0.455 3.095" />
   </xacro:camera_macro>
@@ -346,10 +346,10 @@
     <origin xyz="0 1.0 2.0" rpy="0 0 -1.5707" />
   </xacro:camera_macro>
 
-  <!-- Depth Cameras -->
+  Depth Cameras
   <xacro:depth_camera_macro name="depth_camera">
     <origin xyz="0 0 3" rpy="0 1.5707 0" />
-  </xacro:depth_camera_macro>
+  </xacro:depth_camera_macro> -->
 
   <xacro:if value="$(arg sim_gazebo)">
     <!-- Gazebo plugins -->
